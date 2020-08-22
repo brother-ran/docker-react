@@ -1,0 +1,16 @@
+version: '3'
+services: 
+    web:
+        image: justawalker/frontend:latest
+        ports:
+            - "3000:3000"
+        volumes:
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "start"]
+    tests:
+        image: justawalker/frontend:latest
+        volumes:
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "test"]
