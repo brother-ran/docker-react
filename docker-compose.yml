@@ -7,7 +7,7 @@ services:
         volumes:
             - /app/node_modules
             - .:/app
-        command: ["npm", "run", "start"]
+        command: ["npm", "start"]
     tests:
         image: justawalker/frontend:latest
         volumes:
